@@ -1,3 +1,17 @@
+.root-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh
+} 
+
+.footer-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .dark-mode {
   background-color: #282c34;
   color: white;

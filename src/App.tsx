@@ -1,8 +1,9 @@
-import './App.css';
+import { useEffect, useState } from 'react';
 import Header from'./Header';
+import Footer from './Footer';
 import Markdown from 'react-markdown';
 import contentFile from './textContents/index.md';
-import { useEffect, useState } from 'react';
+import './App.css';
 
 
 function App() {
@@ -16,11 +17,12 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='root-style'>
     <Header isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(!isDarkMode)}/>
     <section>
     <Markdown>{indexContent}</Markdown>
     </section>
+    <Footer isDarkMode={isDarkMode}/>
   </div>
   );
 }
