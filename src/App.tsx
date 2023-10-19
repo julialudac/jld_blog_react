@@ -1,23 +1,26 @@
 import './App.css';
 import Header from'./Header';
+import Markdown from 'react-markdown';
+import contentFile from './textContents/index.md';
+import { useEffect, useState } from 'react';
+
 
 function App() {
+  const [indexContent, setIndexContent] = useState('');
+  const [isDarkMode, setIsDarkMode] = useState(false); // TODO should be in the page or in a store??
+
+  useEffect(() => {
+    fetch(contentFile).then((response) => response.text()).then((text) => {
+      setIndexContent(text)
+    })
+  }, []);
+
   return (
     <div>
-    <Header />
+    <Header isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(!isDarkMode)}/>
     <section>
-    This website has been created to talk about my experience as a Software Developer, my struggles, my successes and my discoveries.
-
-I care about self-improvement in general and enjoy drawing the link between improving as a Developer and growing personally: I am convinced both journeys are entwined. :)
-
-I am more than happy if my experience adds value to the life of others.
-
-Aside from being a blog, the website also serves as an introduction about myself; feel free to have a look at the <a>corresponding section</a>.
+    <Markdown>{indexContent}</Markdown>
     </section>
-    <article>
-      <h1>Posts</h1>
-
-    </article>
   </div>
   );
 }
