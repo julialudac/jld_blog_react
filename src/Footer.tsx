@@ -16,7 +16,7 @@ const Footer: React.FC<Props> = ({isDarkMode}) => {
         <a href='https://github.com/julialudac' target='_blank' rel='noreferrer'><img src={isDarkMode? githubDark : github} alt='github' width={iconSize} height={iconSize} /></a>
         <a href='https://www.linkedin.com/in/julia-lu-dac-a3a527120/' target='_blank' rel='noreferrer'><img src={isDarkMode? linkedinDark : linkedin} alt='linkedin' width={iconSize} height={iconSize} /></a>
       </div>
-      <div>Copyright (c) 2022 - Julia LU DAC </div>
+      <div>Copyright (c) {new Date().getFullYear()} - Julia LU DAC </div>
     </div>
   );
 }
