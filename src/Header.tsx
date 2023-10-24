@@ -20,16 +20,22 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
   })
 
   return (
-      <div style={headerStyle}>
-        <h1>Dev Lu Dac</h1>
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <a>Side projects</a>
-          <a>Posts</a>
-          <img src={isDarkMode ? lightModeIcon : darkModeIcon} alt='darkMode' height='64px' width={'64px'} onClick={toggleDarkMode} />
-        </div>
+    <div style={headerStyle}>
+      <h1>Dev Lu Dac</h1>
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/side-projects">Side projects</Link>
+        <img
+          src={isDarkMode ? lightModeIcon : darkModeIcon}
+          title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+          alt='darkMode'
+          height={'64px'} width={'64px'}
+          onClick={toggleDarkMode} 
+          style={{ cursor: 'pointer' }}
+        />
       </div>
+    </div>
   );
 }
 

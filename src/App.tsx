@@ -5,6 +5,7 @@ import Footer from './Footer';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
+import SideProjects from './pages/SideProjects';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/side-projects' element={<SideProjects />} />
         </Routes>
 
         <Footer isDarkMode={isDarkMode} />

@@ -1,3 +1,13 @@
+body {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
+}
+
 .root-style {
   display: flex;
   flex-direction: column;
@@ -15,6 +25,10 @@
 .dark-mode {
   background-color: #282c34;
   color: white;
+}
+
+.dark-mode a {
+  color: lightskyblue;
 }
 
 .light-mode {

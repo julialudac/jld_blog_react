@@ -17,7 +17,6 @@ const About = () => {
 
   return (
     <div>
-      <h1>About</h1>
       <img src={presentationImage} width="25%" />
       <MarkdownRenderer>{aboutContent}</MarkdownRenderer>
       <p>You can have a look and download my CV <a href={cvFile} target = "_blank" rel="noreferrer">here</a>.</p>
